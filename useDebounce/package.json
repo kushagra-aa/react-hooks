@@ -1,0 +1,38 @@
+{
+  "name": "@kushagra-aa/hooks-usedebounce",
+  "version": "1.0.0",
+  "description": "A React hook for filtering data.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "author": "kushagra-aa <kushagraagnihotri24@gmail.com>",
+  "homepage": "https://kushagra-aa.vercel.app/portfolio/react_hooks",
+  "repository": {
+    "url": "https://github.com/kushagra-aa/react-hooks/useDebounce"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "debounce",
+    "typescript",
+    "javascript"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "prepublishOnly": "npm run build && npm run test",
+    "publish": "npm run build && npm publish"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.25",
+    "@types/react": "^18",
+    "jest": "^28.x",
+    "tsup": "^8.0.2",
+    "typescript": "^4.x"
+  }
+}

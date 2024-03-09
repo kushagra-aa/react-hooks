@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+.env
+.*.env
+
+**/package-lock.json
+
+
+# Local Testing Environment for installation n running
+test-environment/

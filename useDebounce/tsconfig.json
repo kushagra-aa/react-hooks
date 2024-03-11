@@ -9,7 +9,7 @@
         "declaration": true,
         "target": "ES2022",
         "module": "CommonJS",
-        "moduleResolution": "Node10",
+        "moduleResolution": "node",
         "outDir": "dist"
     },
     "include": [

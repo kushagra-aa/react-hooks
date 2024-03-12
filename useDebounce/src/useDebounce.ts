@@ -1,37 +1,46 @@
 import { useEffect, useState } from "react";
 
-function useDebounce(
-  callback: () => void,
-  dependencies: unknown[],
-  timeout?: number
-) {
-  const [isInitialMount, setIsInitialMount] = useState(true);
+function useDebounce({
+  callback,
+  dependencies,
+  timeoutDuration,
+  shouldCallOnInitialRender = false,
+}: {
+  callback: () => void;
+  dependencies: unknown[];
+  timeoutDuration?: number;
+  shouldCallOnInitialRender?: boolean;
+}) {
+  const [isInitialRender, setIsInitialRender] = useState(true);
   const [debounceTimeout, setDebounceTimeout] = useState<
     string | number | NodeJS.Timeout | null
   >(null);
-
   useEffect(() => {
-    if (!isInitialMount) {
-      if (!timeout) {
+    let localDebounceTimeout = debounceTimeout;
+    if (!isInitialRender || shouldCallOnInitialRender) {
+      if (!timeoutDuration) {
         callback(); // Call immediately if no timeout
       } else {
         if (debounceTimeout) clearTimeout(debounceTimeout); // Clear any existing timeout
 
-        const newDebounceTimeout = setTimeout(callback, timeout); // Set new timeout
-        setDebounceTimeout(newDebounceTimeout);
+        localDebounceTimeout = setTimeout(callback, timeoutDuration); // Set new timeout
+        setDebounceTimeout(localDebounceTimeout);
       }
     }
 
-    setIsInitialMount(false); // Mark as not initial mount
+    setIsInitialRender(false); // Mark as not initial Render
 
     // Cleanup the timeout when the component unmounts
     return () => {
+      if (localDebounceTimeout) {
+        clearTimeout(localDebounceTimeout);
+      } // Cleanup localDebounce on unmount
       if (debounceTimeout) {
-        clearTimeout(debounceTimeout); // Cleanup on unmount
-      }
+        clearTimeout(debounceTimeout);
+      } // Cleanup debounce on unmount
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [...dependencies, timeout]);
+  }, [...dependencies, timeoutDuration]);
 }
 
 export default useDebounce;

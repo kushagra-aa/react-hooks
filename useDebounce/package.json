@@ -10,12 +10,17 @@
   "author": "kushagra-aa <kushagraagnihotri24@gmail.com>",
   "homepage": "https://kushagra-aa.vercel.app/portfolio/react_hooks",
   "repository": {
-    "url": "https://github.com/kushagra-aa/react-hooks/useDebounce"
+    "type": "git",
+    "url": "https://github.com/kushagra-aa/react-hooks/",
+    "directory": "/useDebounce/"
   },
   "keywords": [
     "react",
     "hook",
     "debounce",
+    "input",
+    "search",
+    "ts",
     "typescript",
     "javascript"
   ],

@@ -135,7 +135,7 @@ useDebounce({
 Please create an issue on GitHub if you experience a bug.
 I also welcome pull requests.
 
-Read [Contribution Guide](./contribution.md)
+Read [Contribution Guide](../contribution.md)
 
 ## Repository & Feedback
 

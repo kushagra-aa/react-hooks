@@ -1,18 +1,22 @@
 {
   "name": "@kushagra-aa/hooks-usedebounce",
   "version": "1.0.0",
-  "description": "A React hook for filtering data.",
+  "description": "A React hook for apply debounce to the searches.",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "license": "MIT",
+  "private": false,
   "author": "kushagra-aa <kushagraagnihotri24@gmail.com>",
   "homepage": "https://kushagra-aa.vercel.app/portfolio/react_hooks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kushagra-aa/react-hooks/",
+    "url": "git+https://github.com/kushagra-aa/react-hooks.git",
     "directory": "/useDebounce/"
+  },
+  "bugs": {
+    "url": "https://github.com/kushagra-aa/react-hooks/issues"
   },
   "keywords": [
     "react",

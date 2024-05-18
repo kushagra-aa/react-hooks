@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// TODO: Add JSDOCs for explaining the hook
 function useDebounce({
   callback,
   dependencies,

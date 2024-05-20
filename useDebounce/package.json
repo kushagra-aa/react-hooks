@@ -1,6 +1,6 @@
 {
   "name": "@kushagra-aa/hooks-usedebounce",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React hook for apply debounce to the searches.",
   "main": "dist/index.cjs",
   "module": "dist/index.js",

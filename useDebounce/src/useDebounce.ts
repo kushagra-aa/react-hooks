@@ -25,15 +25,16 @@ import { useEffect, useState } from "react";
  *
  * function MyComponent() {
  *   const [searchTerm, setSearchTerm] = useState('');
- *   const debouncedSearchTerm = useDebounce(
+ *   
+ *   const handleSearchChange = (event) => {
+ *   setSearchTerm(event.target.value);
+ *   }
+ *
+ *   useDebounce(
  *     () => console.log('Search term:', searchTerm),
  *     [searchTerm], // Debounce based on searchTerm changes
  *     500 // Delay execution by 500ms
  *   );
- *
- *   const handleSearchChange = (event) => {
- *     setSearchTerm(event.target.value);
- *   };
  *
  *   return (
  *     <div>
